@@ -92,7 +92,7 @@ def draw_gradio_ui(opt, img2img=lambda x: x, txt2img=lambda x: x, txt2img_defaul
                                                                             value='RealESRGAN_x4plus',
                                                                             visible=RealESRGAN is not None)  # TODO: Feels like I shouldnt slot it in here.
                                 txt2img_ddim_eta = gr.Slider(minimum=0.0, maximum=1.0, step=0.01, label="DDIM ETA",
-                                                             value=txt2img_defaults['ddim_eta'], visible=False)
+                                                             value=txt2img_defaults['ddim_eta'], visible=True)
                                 txt2img_variant_amount = gr.Slider(minimum=0.0, maximum=1.0, label='Variation Amount',
                                                                    value=txt2img_defaults['variant_amount'])
                                 txt2img_variant_seed = gr.Textbox(label="Variant Seed (blank to randomize)", lines=1,
